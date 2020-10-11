@@ -1,0 +1,174 @@
+html {
+  background-color: #f0f8fd;
+  font-size: 16px;
+}
+
+@media only screen  and (min-width : 1224px) {
+  html {
+    font-size: 18px;
+  }
+  }
+  
+  
+  @media only screen  and (min-width : 1824px) {
+    html {
+      font-size: 20px;
+    }
+  }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.25;
+  margin: auto 5vw;
+  margin-bottom: 3vh;
+}
+
+.main-body {
+  height: auto;
+  min-height: 100%;
+}
+
+.infobox {
+display: table;
+margin: 5em 1em 0.5em 1.5em;
+padding: 0.2em;
+float: right;
+}
+
+img {
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    
+  }
+  
+  table {
+    border: 2px solid #5c5c59;
+    font-size: .85rem;
+    background-color: #dfe0e7;
+  
+  }
+
+   th:not(.box-header) {
+    display: inline-block; 
+    width: 100%; 
+  } 
+  
+  ul li {
+    list-style: lower-roman;
+    font-size: .9rem;
+    text-align: left;
+    
+  }
+
+  .toc {
+    background-color: #dfe0e7;
+    border: 1px solid #5c5c59;
+    width: fit-content;
+    padding: 15px;
+    margin: 0 25px;
+    
+  }
+
+.char-header {
+  border-bottom: 1px groove #5c5c59;
+}
+
+  .body-content {
+    height: auto;
+    min-height: 100%;
+    position: relative;
+  }
+
+  .img-tile {
+    background: #5c5c59;
+    height:auto;
+  }
+
+  .article-img {
+    background-color: #dfe0e7;
+    border: 2px solid #5c5c59;
+    width: 20vw;
+    max-width: 200px;
+    height: auto;
+    float: left;
+    padding: 5px;
+    margin: auto 1em;
+  }
+
+  /*** MODAL IMG ***/
+
+  .article-img:hover {
+    opacity: 0.7;
+  }
+
+ /* Background */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%; 
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+
+/* Animation */
+
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1);}
+}
+
+/* Close Button */
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
